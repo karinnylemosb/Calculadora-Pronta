@@ -1,0 +1,48 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <main class="calculadora container">
+      
+      <section class="resultado container">
+        <section class="mode"></section>
+        <input id="result" value="" type="text" readonly />
+      </section>
+      
+      <div class="teclas container">
+        <input type="button" value="" onclick="teclas('')" />
+        <input type="button" id="del" value="DEL" onclick="retirar()" />
+        <input type="button" value="%" onclick="teclas(value)" />
+        <input type="button" value="C" onclick="limpar()" />
+        <input type="button" value="7" onclick="teclas(value)" />
+        <input type="button" value="8" onclick="teclas(value)" />
+        <input type="button" value="9" onclick="teclas(value)" />
+        <input type="button" value="x" onclick="teclas('*')" class="operadores-basicos"/>
+        <input type="button" value="4" onclick="teclas(value)" />
+        <input type="button" value="5" onclick="teclas(value)" />
+        <input type="button" value="6" onclick="teclas(value)" />
+        <input type="button" value="-" onclick="teclas(value)"class="operadores-basicos"/>
+        <input type="button" value="1" onclick="teclas(value)" />
+        <input type="button" value="2" onclick="teclas(value)" />
+        <input type="button" value="3" onclick="teclas(value)" />
+        <input type="button" value="/" onclick="teclas(value)"class="operadores-basicos"/>
+        <input type="button" value="0" onclick="teclas(value)" />
+        <input type="button" value="." onclick="teclas(value)" />
+        <input type="button" value="=" onclick="calcular()" id="igual" />
+        <input type="button" value="+" onclick="teclas(value)"class="operadores-basicos"/>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
